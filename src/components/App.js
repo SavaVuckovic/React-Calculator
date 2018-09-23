@@ -14,7 +14,6 @@ class App extends Component {
   }
 
   handleClick(btnName) {
-    console.log('called');
     const result = calculate(this.state, btnName);
     const { total, next, operation } = result;
     this.setState({ total, next, operation });
@@ -23,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="calculator">
-        <Display number={String(this.state.total)}/>
+        <Display number={this.state.total}/>
         <ButtonPanel clickHandler={this.handleClick.bind(this)}/>
       </div>
     );

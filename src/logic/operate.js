@@ -6,17 +6,20 @@ export default function operate(numberOne, numberTwo, operation) {
   let result;
 
   switch (operation) {
-    case 'add':
+    case '+':
       result = numOne.plus(numTwo);
       break;
-    case 'subtract':
+    case '-':
       result = numOne.minus(numTwo);
       break;
-    case 'multiply':
+    case '×':
       result = numOne.times(numTwo);
       break;
-    case 'divide':
+    case '÷':
       result = numOne.div(numTwo);
+      break;
+    case '%':
+      console.log('...');
       break;
     default:
       throw new Error('Invalid operation.');
