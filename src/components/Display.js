@@ -3,13 +3,9 @@ import PropTypes from 'prop-types';
 
 const Display = ({ number }) => (
   <div className="display">
-    {number}
+    {number !== 'null' ? number : '0'}
   </div>
 );
-
-Display.defaultProps = {
-  number: '0'
-};
 
 Display.propTypes = {
   number: PropTypes.string

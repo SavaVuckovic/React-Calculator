@@ -1,36 +1,36 @@
 import React from 'react';
 import Button from './Button';
 
-const ButtonPanel = () => (
+const ButtonPanel = ({ clickHandler }) => (
   <div className="btn-panel">
     <div className="btn-group">
-      <Button name={'AC'}/>
-      <Button name={'+/-'}/>
-      <Button name={'%'}/>
-      <Button name={'÷'}/>
+      <Button name={'AC'} clickHandler={clickHandler}/>
+      <Button name={'+/-'} clickHandler={clickHandler}/>
+      <Button name={'%'} clickHandler={clickHandler}/>
+      <Button name={'÷'} clickHandler={clickHandler}/>
     </div>
     <div className="btn-group">
-      <Button name={'7'}/>
-      <Button name={'8'}/>
-      <Button name={'9'}/>
-      <Button name={'×'}/>
+      <Button name={'7'} clickHandler={clickHandler}/>
+      <Button name={'8'} clickHandler={clickHandler}/>
+      <Button name={'9'} clickHandler={clickHandler}/>
+      <Button name={'×'} clickHandler={clickHandler}/>
     </div>
     <div className="btn-group">
-      <Button name={'4'}/>
-      <Button name={'5'}/>
-      <Button name={'6'}/>
-      <Button name={'-'}/>
+      <Button name={'4'} clickHandler={clickHandler}/>
+      <Button name={'5'} clickHandler={clickHandler}/>
+      <Button name={'6'} clickHandler={clickHandler}/>
+      <Button name={'-'} clickHandler={clickHandler}/>
     </div>
     <div className="btn-group">
-      <Button name={'1'}/>
-      <Button name={'2'}/>
-      <Button name={'3'}/>
-      <Button name={'+'}/>
+      <Button name={'1'} clickHandler={clickHandler}/>
+      <Button name={'2'} clickHandler={clickHandler}/>
+      <Button name={'3'} clickHandler={clickHandler}/>
+      <Button name={'+'} clickHandler={clickHandler}/>
     </div>
     <div className="btn-group">
-      <Button name={'0'} wide/>
-      <Button name={'.'}/>
-      <Button name={'='}/>
+      <Button name={'0'} clickHandler={clickHandler} wide/>
+      <Button name={'.'} clickHandler={clickHandler}/>
+      <Button name={'='} clickHandler={clickHandler}/>
     </div>
   </div>
 );

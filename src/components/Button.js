@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ name, wide }) => (
-  <button className={`btn ${wide ? 'wide' : ''}`}>
+const Button = ({ name, wide, clickHandler }) => (
+  <button 
+    className={`btn ${wide ? 'wide' : ''}`}
+    onClick={() => clickHandler(name)}
+  >
     {name}
   </button>
 );

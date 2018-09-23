@@ -8,6 +8,7 @@ export default function calculate(calcData, btnName) {
       total = null;
       next = null;
       operation = null;
+      break;
     case '+/-':
       total *= -1;
       next *= -1;
