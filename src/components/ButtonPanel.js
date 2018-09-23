@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 
 const ButtonPanel = () => (
-  <div className="button-panel">
+  <div className="btn-panel">
     <div className="btn-group">
       <Button name={'AC'}/>
       <Button name={'+/-'}/>
@@ -28,7 +28,7 @@ const ButtonPanel = () => (
       <Button name={'+'}/>
     </div>
     <div className="btn-group">
-      <Button name={'0'}/>
+      <Button name={'0'} wide/>
       <Button name={'.'}/>
       <Button name={'='}/>
     </div>

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
     "concurrently": "^4.0.1",
     "node-sass": "^4.9.3",
     "prop-types": "^15.6.2",
