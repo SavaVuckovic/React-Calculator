@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/css/index.css';
 import 'babel-polyfill';
 import registerServiceWorker from './registerServiceWorker';
 import App from './components/App';
