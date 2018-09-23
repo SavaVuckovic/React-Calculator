@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.calculator {
+  border: 1px solid black;
+  width: 800px;
+  margin: 10vh auto;
+}
+
+.display {
+  background: black;
+  height: 100px;
+  color: white;
+}
