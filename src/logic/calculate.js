@@ -28,13 +28,13 @@ export default function calculate(calcData, btnName) {
     next = null;
     operation = null;
   } else if (btnName === '+/-') {
-    total *= -1;
-    next *= -1;
+    total = String(total * -1);
+    next = String(next * -1);
   } else if (btnName === '%') {
     if (next) {
-      next /= 100;
+      next = String(next / 100);
     } else {
-      total /= 100;
+      total = String(total / 100);
     }
   } else if (btnName === '.') {
     if (next) {
