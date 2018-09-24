@@ -13,7 +13,7 @@ const Button = ({ name, wide, clickHandler }) => (
 Button.propTypes = {
   name: PropTypes.string,
   wide: PropTypes.bool,
-  clickHandler: propTypes.func
+  clickHandler: PropTypes.func
 };
 
 export default Button;
