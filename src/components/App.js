@@ -21,11 +21,11 @@ class App extends Component {
 
   render() {
     const { total, next, operation } = this.state;
-    let displayValue;
+    let displayValue = '';
 
     if (next) {
       displayValue = next;
-    } else {
+    } else if (total) {
       displayValue = operation ? `${total}${operation}` : total;
     }
 

@@ -2,6 +2,8 @@
 
 #### Calculator app built using React library
 
+Try it out [live on Heroku](https://rcalculator.herokuapp.com/)!
+
 ![screenshot](screenshot.png)
 
 ### Installing dependencies
