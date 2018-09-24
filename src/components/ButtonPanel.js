@@ -35,4 +35,8 @@ const ButtonPanel = ({ clickHandler }) => (
   </div>
 );
 
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func
+};
+
 export default ButtonPanel;
