@@ -2,37 +2,27 @@ import operate from './operate';
 
 export default function calculate(calcData, btnName) {
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  const operators = ['%', '+', '-', '×', '÷'];
+  const operators = ['+', '-', '×', '÷'];
   let { total, next, operation } = calcData;
 
   if (numbers.includes(btnName)) {
-    // total is empty
     if (!total) {
       total = ''
       total += btnName;
-    }
-    // no operator
-    else if (!operation && total) {
+    } else if (!operation) {
       total += btnName;
-    }
-    // both operation and total present but not next
-    else if (operation && total && !next) {
+    } else if (!next) {
       next = '';
       next += btnName;
-    }
-    // -||- but next is also there
-    else if (operation && total && next) {
+    } else if (next) {
       next += btnName;
     }
-
-
   } else if (operators.includes(btnName)) {
-    if (operation === null) {
-      operation = btnName;
-    } else {
-      /// PERFORM OPERATION ON TOTAL
-      operation = null
+    if (operation && next) {
+      total = String(operate(Number(total), next, operation));
+      next = null;
     }
+    operation = btnName;
   } else if (btnName === 'AC') {
     total = null;
     next = null;
@@ -40,15 +30,24 @@ export default function calculate(calcData, btnName) {
   } else if (btnName === '+/-') {
     total *= -1;
     next *= -1;
-  } else if (btnName === '=') {
-    if (total) {
-      const result = operate(Number(total), next, operation);
-      total = String(result);
+  } else if (btnName === '%') {
+    if (next) {
+      next /= 100;
     } else {
-      total = operate(0, next, operation);
+      total /= 100;
     }
   } else if (btnName === '.') {
-
+    if (next) {
+      next = (next.indexOf('.') !== -1) ? next : next + '.';
+    } else {
+      total = (total.indexOf('.') !== -1) ? total : total + '.';
+    }
+  } else if (btnName === '=') {
+    if (next) {
+      total = total ? String(operate(Number(total), next, operation)) : operate(0, next, operation);
+      next = null;
+      operation = null;
+    }
   }
 
   return { total, next, operation };

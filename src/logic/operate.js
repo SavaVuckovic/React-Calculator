@@ -18,12 +18,9 @@ export default function operate(numberOne, numberTwo, operation) {
     case '÷':
       result = numOne.div(numTwo);
       break;
-    case '%':
-      console.log('...'); // later
-      break;
     default:
       throw new Error('Invalid operation.');
   }
 
-  return result.c.join('');
+  return result.valueOf();
 }
