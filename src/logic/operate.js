@@ -19,11 +19,11 @@ export default function operate(numberOne, numberTwo, operation) {
       result = numOne.div(numTwo);
       break;
     case '%':
-      console.log('...');
+      console.log('...'); // later
       break;
     default:
       throw new Error('Invalid operation.');
   }
 
-  return result.c[0];
+  return result.c.join('');
 }
