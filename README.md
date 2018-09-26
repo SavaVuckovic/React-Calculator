@@ -14,4 +14,6 @@ In order to successfully install dependencies and run the application, it is req
 
 ### Running the application locally
 
+In order to start the application successfully, it is required to have a ruby `sass` gem installed globally because SASS is used for styling.
+
 `npm start`
